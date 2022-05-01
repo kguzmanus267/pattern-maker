@@ -3,16 +3,23 @@ const c = canvas.getContext('2d')
 
 canvas.width = 1200
 canvas.height= 800
-//zips 1-10 dare lines on xy axis
+//function xRandom(){Math.floor(Math.random()*1200)+1}
+//function yRandom(){Math.floor(Math.random()*750)+1}
+//function speedRandom(){Math.floor(Math.random()*5)+1}
+//function xRandomPlus() {
+  //  intervalId = setInterval(xRandom, 1000);
+    //console.log('plus')
+  //}
+//zips 1-10 are lines on xy axis
 class Zip {
     constructor(){
         this.position = {
-            x:10,
-            y:5
+            x:Math.floor(Math.random()*1200)+1,
+            y:Math.floor(Math.random()*750)+1
         }
         this.velocity = {
-            x:5,
-            y:5
+            x:Math.sin(Math.floor(Math.random()*5)+1),
+            y:Math.sin(Math.floor(Math.random()*5)+1)
         }
         
         const image = new Image()
@@ -24,9 +31,12 @@ class Zip {
 
         } 
     draw() {
-        c.fillStyle = 'red'
-        c.fillRect(this.position.x, this.position.y,this.width,this.height)
+        c.strokeStyle = 'cyan'
+        c.beginPath();
+        c.arc(this.position.x, this.position.y, 100,0,2*Math.PI);
+        c.stroke();
      c.drawImage(
+         
         this.image, 
         this.position.x, 
         this.position.y, 
@@ -46,12 +56,12 @@ class Zip {
 class Zip2{
     constructor(){
         this.position = {
-            x:10,
-            y:34
+            x:Math.floor(Math.random()*1200)+1,
+            y:Math.floor(Math.random()*750)+1
         }
         this.velocity = {
-            x:5,
-            y:34        }
+            x:Math.floor(Math.random()*5)+1,
+            y:Math.floor(Math.random()*5)+1        }
         
         const image = new Image()
        
@@ -62,8 +72,10 @@ class Zip2{
 
         } 
     draw() {
-        c.fillStyle = 'blue'
-        c.fillRect(this.position.x, this.position.y,this.width,this.height)
+        c.strokeStyle = 'lime'
+        c.beginPath();
+        c.arc(this.position.x, this.position.y, 100,0,2*Math.PI);
+        c.stroke();
      c.drawImage(
         this.image, 
         this.position.x, 
@@ -83,12 +95,12 @@ class Zip2{
 class Zip3{
     constructor(){
         this.position = {
-            x:10,
-            y:305
+            x:Math.floor(Math.random()*1200)+1,
+            y:Math.floor(Math.random()*750)+1
         }
         this.velocity = {
-            x:55,
-            y:5
+            x:Math.sin(Math.floor(Math.random()*5)+1),
+            y:Math.sin(Math.floor(Math.random()*5)+1)
         }
         
         const image = new Image()
@@ -100,8 +112,10 @@ class Zip3{
 
         } 
     draw() {
-        c.fillStyle = 'green'
-        c.fillRect(this.position.x, this.position.y,this.width,this.height)
+        c.strokeStyle = 'blue'
+        c.beginPath();
+        c.arc(this.position.x, this.position.y, 100,0,2*Math.PI);
+        c.stroke();
      c.drawImage(
         this.image, 
         this.position.x, 
@@ -121,12 +135,12 @@ class Zip3{
 class Zip4{
     constructor(){
         this.position = {
-            x:378,
-            y:30
+            x:Math.floor(Math.random()*1200)+1,
+            y:Math.floor(Math.random()*750)+1
         }
         this.velocity = {
-            x:5,
-            y:447
+            x:Math.floor(Math.random()*5)+1,
+            y:Math.floor(Math.random()*5)+1
         }
         
         const image = new Image()
@@ -138,8 +152,10 @@ class Zip4{
 
         } 
     draw() {
-        c.fillStyle = 'yellow'
-        c.fillRect(this.position.x, this.position.y,this.width,this.height)
+        c.strokeStyle = 'yellow'
+        c.beginPath();
+        c.arc(this.position.x, this.position.y, 100,0,2*Math.PI);
+        c.stroke();
      c.drawImage(
         this.image, 
         this.position.x, 
@@ -159,12 +175,12 @@ class Zip4{
 class Zip5{
     constructor(){
         this.position = {
-            x:785,
-            y:30
+            x:Math.floor(Math.random()*1200)+1,
+            y:Math.floor(Math.random()*750)+1
         }
         this.velocity = {
-            x:5,
-            y:5
+            x:Math.sin(Math.floor(Math.random()*5)+1),
+            y:Math.sin(Math.floor(Math.random()*5)+1)
         }
         
         const image = new Image()
@@ -176,8 +192,10 @@ class Zip5{
 
         } 
     draw() {
-        c.fillStyle = 'purple'
-        c.fillRect(this.position.x, this.position.y,this.width,this.height)
+        c.strokeStyle = 'crimson'
+        c.beginPath();
+        c.arc(this.position.x, this.position.y, 100,0,2*Math.PI);
+        c.stroke();
      c.drawImage(
         this.image, 
         this.position.x, 
@@ -197,12 +215,12 @@ class Zip5{
 class Zip6{
     constructor(){
         this.position = {
-            x:10,
-            y:75
+            x:Math.floor(Math.random()*1200)+1,
+            y:Math.floor(Math.random()*750)+1
         }
         this.velocity = {
-            x:5,
-            y:5
+            x:Math.sin(Math.floor(Math.random()*5)+1),
+            y:Math.sin(Math.floor(Math.random()*5)+1)
         }
         
         const image = new Image()
@@ -214,8 +232,10 @@ class Zip6{
 
         } 
     draw() {
-        c.fillStyle = 'white'
-        c.fillRect(this.position.x, this.position.y,this.width,this.height)
+        c.strokeStyle = 'white'
+        c.beginPath();
+        c.arc(this.position.x, this.position.y, 100,0,2*Math.PI);
+        c.stroke();
      c.drawImage(
         this.image, 
         this.position.x, 
@@ -235,12 +255,12 @@ class Zip6{
 class Zip7{
     constructor(){
         this.position = {
-            x:78,
-            y:30
+            x:Math.floor(Math.random()*1200)+1,
+            y:Math.floor(Math.random()*750)+1
         }
         this.velocity = {
-            x:5,
-            y:5
+            x:Math.cos(Math.PI/360),
+            y:Math.sin(Math.PI/360)
         }
         
         const image = new Image()
@@ -252,8 +272,10 @@ class Zip7{
 
         } 
     draw() {
-        c.fillStyle = 'pink'
-        c.fillRect(this.position.x, this.position.y,this.width,this.height)
+        c.strokeStyle = 'lightgrey'
+        c.beginPath();
+        c.arc(this.position.x, this.position.y, 100,0,2*Math.PI);
+        c.stroke();
      c.drawImage(
         this.image, 
         this.position.x, 
@@ -273,12 +295,12 @@ class Zip7{
 class Zip8{
     constructor(){
         this.position = {
-            x:10,
-            y:30
+            x:Math.floor(Math.random()*1200)+1,
+            y:Math.floor(Math.random()*750)+1
         }
         this.velocity = {
-            x:5,
-            y:52
+            x:Math.floor(Math.random()*5)+1,
+            y:Math.floor(Math.random()*5)+1
         }
         
         const image = new Image()
@@ -290,8 +312,10 @@ class Zip8{
 
         } 
     draw() {
-        c.fillStyle = 'teal'
-        c.fillRect(this.position.x, this.position.y,this.width,this.height)
+        c.strokeStyle = 'teal'
+        c.beginPath();
+        c.arc(this.position.x, this.position.y, 100,0,2*Math.PI);
+        c.stroke();
      c.drawImage(
         this.image, 
         this.position.x, 
@@ -310,12 +334,12 @@ class Zip8{
  class Zip9{
     constructor(){
        this.position = {
-                    x:10,
-                    y:45
+        x:Math.floor(Math.random()*1200)+1,
+        y:Math.floor(Math.random()*750)+1
                 }
         this.velocity = {
-                    x:5,
-                    y:5
+            x:Math.floor(Math.random()*5)+1,
+            y:Math.floor(Math.random()*5)+1
                 }
                 
                 const image = new Image()
@@ -327,8 +351,10 @@ class Zip8{
         
                 } 
       draw() {
-                c.fillStyle = 'orange'
-                c.fillRect(this.position.x, this.position.y,this.width,this.height)
+        c.strokeStyle = 'orange'
+        c.beginPath();
+        c.arc(this.position.x, this.position.y, 100,0,2*Math.PI);
+        c.stroke();
      c.drawImage(
                 this.image, 
                 this.position.x, 
@@ -348,12 +374,12 @@ class Zip8{
  class Zip10{
             constructor(){
                 this.position = {
-                    x:456,
-                    y:40
+                    x:Math.floor(Math.random()*1200)+1,
+                    y:Math.floor(Math.random()*750)+1
                 }
                 this.velocity = {
-                    x:9,
-                    y:5
+                    x:Math.sin(Math.floor(Math.random()*5)+1),
+                    y:Math.sin(Math.floor(Math.random()*5)+1)
                 }
                 
                 const image = new Image()
@@ -365,8 +391,10 @@ class Zip8{
         
                 } 
             draw() {
-                c.fillStyle = 'magenta'
-                c.fillRect(this.position.x, this.position.y,this.width,this.height)
+                c.strokeStyle = 'magenta'
+        c.beginPath();
+        c.arc(this.position.x, this.position.y, 100,0,2*Math.PI);
+        c.stroke();
              c.drawImage(
                 this.image, 
                 this.position.x, 
@@ -389,12 +417,12 @@ class Zip8{
         class Circular{
     constructor(){
         this.position = {
-            x:489,
-            y:30
+            x:Math.floor(Math.random()*1200)+1,
+            y:Math.floor(Math.random()*750)+1
         }
         this.velocity = {
-            x:5,
-            y:5
+            x:Math.floor(Math.random()*5)+1,
+            y:Math.floor(Math.random()*5)+1
         }
         
         const image = new Image()
@@ -430,12 +458,12 @@ class Zip8{
 class Circular2{
     constructor(){
         this.position = {
-            x:5+6,
-            y:345+6
+            x:Math.floor(Math.random()*1200)+1,
+            y:Math.floor(Math.random()*750)+1
         }
         this.velocity = {
-            x:5,
-            y:5
+            x:Math.floor(Math.random()*5)+1,
+            y:Math.floor(Math.random()*5)+1
         }
         
         const image = new Image()
@@ -471,8 +499,8 @@ class Circular2{
 class Circular3{
     constructor(){
         this.position = {
-            x:265,
-            y:189
+            x:Math.floor(Math.random()*1200)+1,
+            y:Math.floor(Math.random()*750)+1
         }
         this.velocity = {
             x:52,
@@ -512,12 +540,12 @@ class Circular3{
 class Circular4{
     constructor(){
         this.position = {
-            x:50,
-            y:60
+            x:Math.floor(Math.random()*1200)+1,
+            y:Math.floor(Math.random()*750)+1
         }
         this.velocity = {
-            x:52,
-            y:3
+            x:Math.floor(Math.random()*5)+1,
+            y:Math.floor(Math.random()*5)+1
         }
         
         const image = new Image()
@@ -553,12 +581,12 @@ class Circular4{
 class Circular5{
     constructor(){
         this.position = {
-            x:66,
-            y:50
+            x:Math.floor(Math.random()*1200)+1,
+            y:Math.floor(Math.random()*750)+1
         }
         this.velocity = {
-            x:55,
-            y:10
+            x:Math.floor(Math.random()*5)+1,
+            y:Math.floor(Math.random()*5)+1
         }
         
         const image = new Image()
@@ -598,8 +626,8 @@ class Circular6{
             y:6
         }
         this.velocity = {
-            x:8,
-            y:88
+            x:Math.floor(Math.random()*1200)+1,
+            y:Math.floor(Math.random()*750)+1
         }
         
         const image = new Image()
@@ -635,12 +663,12 @@ class Circular6{
 class Circular7{
     constructor(){
         this.position = {
-            x:10,
-            y:0
+            x:Math.floor(Math.random()*1200)+1,
+            y:Math.floor(Math.random()*750)+1
         }
         this.velocity = {
-            x:4,
-            y:22
+            x:Math.floor(Math.random()*5)+1,
+            y:Math.floor(Math.random()*5)+1
         }
         
         const image = new Image()
@@ -730,4 +758,7 @@ circular5.update()
 circular6.update()
 circular7.update()
 }
+setTimeout(function(){
+    window.location.reload(1);
+ }, 7000);
 animate()

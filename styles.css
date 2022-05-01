@@ -10,6 +10,9 @@ div{
 
 .title{
     display: inline, flex;
+    position: fixed;
+    top: 5px;
+    left: 15px;
     flex-direction: row;
     color: antiquewhite;
     font-family: "ocr-a-std" ;
@@ -21,14 +24,9 @@ div{
     white-space: nowrap;
 }
 
-aside{
-    color: antiquewhite;
-    font-family: "ocr-a-std";
-    font-size: x-large;
-    float:  right;
-    width: 40rem;
-    height: 100%;
-    padding-top: 300px;
+.canvasmover{
+    top: 5000px;
+    left: 5000px;
 }
 /*{
     display: flex;
