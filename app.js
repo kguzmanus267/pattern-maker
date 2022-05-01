@@ -759,6 +759,7 @@ circular6.update()
 circular7.update()
 }
 setTimeout(function(){
+    console.log('Refresh');
     window.location.reload(1);
  }, 7000);
 animate()
