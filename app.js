@@ -1,6 +1,8 @@
 const canvas = document.querySelector('canvas')
 const c = canvas.getContext('2d')
 
+//document.getElementsByClassName()
+//document.querySelectorAll()
 canvas.width = 1200
 canvas.height= 800
 //function xRandom(){Math.floor(Math.random()*1200)+1}
@@ -11,6 +13,8 @@ canvas.height= 800
     //console.log('plus')
   //}
 //zips 1-10 are lines on xy axis
+var randomColor = '#'+Math.floor(Math.random()*16777215).toString(16);
+
 class Zip {
     constructor(){
         this.position = {
@@ -30,7 +34,7 @@ class Zip {
         
 
         } 
-    draw() {
+    draw() {  
         c.strokeStyle = 'cyan'
         c.beginPath();
         c.arc(this.position.x, this.position.y, 100,0,2*Math.PI);
@@ -331,7 +335,7 @@ class Zip8{
         
     
     }}}
- class Zip9{
+class Zip9{
     constructor(){
        this.position = {
         x:Math.floor(Math.random()*1200)+1,
@@ -371,7 +375,7 @@ class Zip8{
             
             }}
         }
- class Zip10{
+class Zip10{
             constructor(){
                 this.position = {
                     x:Math.floor(Math.random()*1200)+1,
@@ -412,9 +416,7 @@ class Zip8{
             }}
             
         }
-
-//circular are circles moving about
-        class Circular{
+class Circular{
     constructor(){
         this.position = {
             x:Math.floor(Math.random()*1200)+1,
@@ -701,6 +703,10 @@ class Circular7{
     }}
 
 }
+const changer = {
+     space: {pressed:false}
+
+}
 const zip = new Zip()
 const zip2 = new Zip2()
 const zip3 = new Zip3()
@@ -718,6 +724,7 @@ const circular4= new Circular4()
 const circular5 = new Circular6()
 const circular6= new Circular6()
 const circular7 = new Circular7()
+
 zip.update
 zip2.update
 zip3.update
@@ -758,8 +765,18 @@ circular5.update()
 circular6.update()
 circular7.update()
 }
+
+
+document.addEventListener('keydown',({key}) => {
+    switch (key){
+        case ' ':{console.log('test')
+    }
+            
+        break}
+
 setTimeout(function(){
     console.log('Refresh');
     window.location.reload(1);
- }, 7000);
+ }, 70000)});
+
 animate()
